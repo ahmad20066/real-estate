@@ -42,8 +42,8 @@ class PageViewScreen extends StatelessWidget {
           child: Text(
             subtitle,
             textAlign: TextAlign.center,
-            style: GoogleFonts.josefinSans(
-                color: Color.fromRGBO(157, 157, 157, 0.87), fontSize: 20.sp),
+            style: TextStyle(
+                color: Color.fromRGBO(157, 157, 157, 1), fontSize: 20.sp),
           ),
         )
       ],

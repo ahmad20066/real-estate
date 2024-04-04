@@ -32,7 +32,7 @@ class WalkThroughScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 CustomButton(
-                    height: 40.h,
+                    height: 50.h,
                     width: controller.activeIndex.value > 0 ? 130 : 0,
                     text: "Previous",
                     onTap: () {
@@ -44,7 +44,7 @@ class WalkThroughScreen extends StatelessWidget {
                 CustomButton(
                     text: controller.activeIndex.value == 2 ? "Finish" : "Next",
                     width: 130.w,
-                    height: 40.h,
+                    height: 50.h,
                     onTap: () {
                       if (controller.activeIndex.value == 2) {
                         Get.to(() => LoginScreen());
