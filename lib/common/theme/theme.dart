@@ -5,7 +5,7 @@ class AppTheme {
   static ThemeData getAppTheme() {
     return ThemeData(
         fontFamily: "Josefin Sans",
-        scaffoldBackgroundColor: AppColors.backgroundColor,
+        scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
         colorScheme: ColorScheme.fromSwatch().copyWith(
           primary: AppColors.primaryColor,
         ));

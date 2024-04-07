@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Response;
@@ -20,15 +19,15 @@ class AppInterceptors extends Interceptor {
     debugPrint("request is sending");
     debugPrint(
         "REQUEST[${options.method}] => PATH: ${EndPoints.baseUrl}${options.path}");
-    final connectivityResult = await (Connectivity().checkConnectivity());
-    if (connectivityResult == ConnectivityResult.none) {
-      if (!isNointernet) {
-        isNointernet = false;
-        return handler.reject(
-            DioException(requestOptions: options, message: "no_internet".tr));
-      }
-      return;
-    }
+    // final connectivityResult = await (Connectivity().checkConnectivity());
+    // if (connectivityResult == ConnectivityResult.none) {
+    //   if (!isNointernet) {
+    //     isNointernet = false;
+    //     return handler.reject(
+    //         DioException(requestOptions: options, message: "no_internet".tr));
+    //   }
+    //   return;
+    // }
 
     return handler.next(options);
   }
@@ -38,17 +37,17 @@ class AppInterceptors extends Interceptor {
     debugPrint("response is getting");
     isNointernet = false;
 
-    final connectivityResult = await (Connectivity().checkConnectivity());
+    // final connectivityResult = await (Connectivity().checkConnectivity());
 
-    if (connectivityResult == ConnectivityResult.none) {
-      if (!isNointernet) {
-        isNointernet = false;
-        return handler.reject(DioException(
-            requestOptions: response.requestOptions,
-            message: "no_internet".tr));
-      }
-      return;
-    }
+    // if (connectivityResult == ConnectivityResult.none) {
+    //   if (!isNointernet) {
+    //     isNointernet = false;
+    //     return handler.reject(DioException(
+    //         requestOptions: response.requestOptions,
+    //         message: "no_internet".tr));
+    //   }
+    //   return;
+    // }
 
     if (response.statusCode == 401) {
       debugPrint("hello from 401");
