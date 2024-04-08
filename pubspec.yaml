@@ -47,6 +47,7 @@ dependencies:
   flutter_image_compress: ^2.2.0
   persistent_bottom_nav_bar: ^5.0.2
   svg_flutter: ^0.0.1
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:
@@ -87,10 +88,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Josefin Sans
+    - family: Calibri
       fonts:
         - asset: fonts/JosefinSans-Italic-VariableFont_wght.ttf
         - asset: fonts/JosefinSans-VariableFont_wght.ttf
+    - family: Josefin Sans
+      fonts:
+        - asset: fonts/Calibri.ttf
 
   #   - family: Trajan Pro
   #     fonts:
