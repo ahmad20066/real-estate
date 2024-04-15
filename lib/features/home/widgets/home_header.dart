@@ -14,6 +14,7 @@ class HomePageHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const HomeUserInfo(),
         SizedBox(
@@ -71,7 +72,82 @@ class HomePageHeader extends StatelessWidget {
               )
             ],
           ),
-        )
+        ),
+        SizedBox(
+          height: 15.h,
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 25.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 50.h,
+                width: 120.w,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.black),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.green,
+                      radius: 5.r,
+                    ),
+                    Text('Approved')
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15.h,
+              ),
+              Container(
+                height: 150.h,
+                width: 344.w,
+                padding: EdgeInsets.all(15.h),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 76.w,
+                      height: 96.h,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            'assets/images/building.jpg',
+                            fit: BoxFit.fill,
+                          )),
+                    ), //
+                    Column(
+                      children: [
+                        Text("Modern Family House", style: Theme.of(context).textTheme.bodyMedium,),
+                        Text("RT: Kylie smthn"),
+                        Text("3,500 \$ Month"),
+                        Text("14,March 2024  11:20 AM")
+                      ],
+                    ),
+                    GestureDetector(
+                      child: Container(
+                        height: 100.h,
+                        width: 35.w,
+                        decoration: BoxDecoration(
+                            color: AppColors.kLightGreenColor,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Center(
+                          child: Icon(Icons.keyboard_arrow_right_rounded),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
       ],
     );
   }
