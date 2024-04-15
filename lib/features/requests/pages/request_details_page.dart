@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:real_estate/common/constants/colors.dart';
+import 'package:real_estate/common/routes/app_routes.dart';
 import 'package:real_estate/common/widgets/custom_button.dart';
 import 'package:real_estate/features/requests/widgets/request_details_widget.dart';
 
@@ -37,7 +39,9 @@ class RequestDetailsPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  CustomButton(text: 'Accept', onTap: () {}),
+                  CustomButton(text: 'Accept', onTap: () {
+                    Get.toNamed(AppRoute.paymentPageUrl);
+                  }),
                   CustomButton(
                     text: 'Reject',
                     onTap: () {},
