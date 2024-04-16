@@ -1,0 +1,1 @@
+enum InboxEnum { all, unread }

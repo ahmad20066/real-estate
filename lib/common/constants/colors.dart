@@ -8,4 +8,5 @@ class AppColors {
   static const kLightGreenColor = Color(0xFF94E181);
   static const purpleColor = Color(0xFFD389C9);
   static const blueColor = Color(0xFF2EB0C9);
+  static const pinkColor = Color(0xFFF15FA5);
 }

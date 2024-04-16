@@ -17,26 +17,27 @@ class HomeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-        borderRadius: isRight
-            ? BorderRadius.only(
-                topLeft: Radius.circular(30.r),
-                bottomLeft: Radius.circular(30.r),
-              )
-            : BorderRadius.only(
-                topRight: Radius.circular(30.r),
-                bottomRight: Radius.circular(30.r)),
-        child: MaterialButton(
-          height: 53.h,
-          minWidth: 130.w,
-          color: isClicked ? AppColors.primaryColor : AppColors.kLightGreyColor,
-          onPressed: onPressed,
-          child: Text(
-            text!,
-            style: Theme.of(context)
-                .textTheme
-                .bodyMedium!
-                .copyWith(color: Colors.white),
-          ),
-        ));
+      borderRadius: isRight
+          ? BorderRadius.only(
+              topLeft: Radius.circular(30.r),
+              bottomLeft: Radius.circular(30.r),
+            )
+          : BorderRadius.only(
+              topRight: Radius.circular(30.r),
+              bottomRight: Radius.circular(30.r)),
+      child: MaterialButton(
+        height: 53.h,
+        minWidth: 130.w,
+        color: isClicked ? AppColors.primaryColor : AppColors.kLightGreyColor,
+        onPressed: onPressed,
+        child: Text(
+          text!,
+          style: Theme.of(context)
+              .textTheme
+              .bodyMedium!
+              .copyWith(color: Colors.white),
+        ),
+      ),
+    );
   }
 }

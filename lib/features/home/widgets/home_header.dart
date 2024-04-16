@@ -20,7 +20,20 @@ class HomePageHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const HomeUserInfo(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const HomeUserInfo(),
+              IconButton(
+                  onPressed: () {
+                    controller.scaffoldKey.currentState!.openDrawer();
+                  },
+                  icon: Icon(
+                    Icons.align_horizontal_right_sharp,
+                    color: AppColors.primaryColor,
+                  ))
+            ],
+          ),
           SizedBox(
             height: 30.h,
           ),
@@ -78,13 +91,11 @@ class HomePageHeader extends StatelessWidget {
               ],
             ),
           ),
-          Obx(
-            () => controller.currentScreen.value == HomeEnum.home
-                ? Container(
-                    child: Text('HOME'),
-                  )
-                : RequestsBody()
-          ),
+          Obx(() => controller.currentScreen.value == HomeEnum.home
+              ? Container(
+                  child: Text('HOME'),
+                )
+              : RequestsBody()),
         ],
       ),
     );

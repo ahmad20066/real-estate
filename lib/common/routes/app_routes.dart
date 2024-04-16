@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:real_estate/features/inbox/page/chat_page.dart';
 import 'package:real_estate/features/requests/pages/payment_page.dart';
 import 'package:real_estate/features/requests/pages/rented_request_details_page.dart';
 import 'package:real_estate/features/requests/pages/request_details_page.dart';
@@ -11,13 +12,14 @@ class AppRoute {
   static const requestDetailsUrl = "/request-details-url";
   static const rentedRequestDetailsUrl = "/rented-request-details-url";
   static const soldRequestDetailsUrl = "/sold-request-details-url";
-  static const paymentPageUrl = '/payment-page';
-
+  static const paymentPageUrl = '/payment-page-url';
+  static const chatPageUrl = '/chat-page-url';
 
   static List<GetPage> pages = [
     GetPage(name: requestDetailsUrl, page: () => RequestDetailsPage()),
     GetPage(name: rentedRequestDetailsUrl, page: () => RentedDetailsPage()),
     GetPage(name: soldRequestDetailsUrl, page: () => SoldRequestDetailsPage()),
-    GetPage(name: paymentPageUrl, page: () => PaymentPage())
+    GetPage(name: paymentPageUrl, page: () => PaymentPage()),
+    GetPage(name: chatPageUrl, page: () => ChatPage())
   ];
 }
