@@ -6,8 +6,8 @@ import 'package:real_estate/common/enums/home_enum.dart';
 import 'package:real_estate/features/home/controller/home_controller.dart';
 import 'package:real_estate/features/home/widgets/home_button.dart';
 import 'package:real_estate/features/home/widgets/home_user_info.dart';
-import 'package:real_estate/features/requests/widgets/request_widget.dart';
-import 'package:real_estate/features/requests/widgets/status_widget.dart';
+import 'package:real_estate/features/home/widgets/propertiesbody.dart';
+
 import 'package:real_estate/features/requests/widgets/requests_body.dart';
 
 // ignore: must_be_immutable
@@ -92,9 +92,7 @@ class HomePageHeader extends StatelessWidget {
             ),
           ),
           Obx(() => controller.currentScreen.value == HomeEnum.home
-              ? Container(
-                  child: Text('HOME'),
-                )
+              ? PropertiesBody()
               : RequestsBody()),
         ],
       ),
