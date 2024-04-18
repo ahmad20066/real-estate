@@ -23,13 +23,13 @@ class _PropertyCarousalState extends State<PropertyCarousal> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400.h,
+      height: 510.h,
       child: CarouselSlider.builder(
           itemCount: 6,
           itemBuilder: (context, index, realIndex) => PropertyWidget(),
           options: CarouselOptions(
             viewportFraction: 0.6,
-            height: 370.h,
+            height: 500.h,
             initialPage: selectedIndex,
             enlargeCenterPage: true,
             enableInfiniteScroll: false,
